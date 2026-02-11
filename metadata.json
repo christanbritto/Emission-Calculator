@@ -1,0 +1,5 @@
+{
+  "name": "Emission Calculator",
+  "description": "A specialized tool for naval architects and ship owners to calculate blended CO2 Emission Factors (Cf) in compliance with IMO MEPC.1/Circ.905 guidance for maritime biofuel blends.",
+  "requestFramePermissions": []
+}
