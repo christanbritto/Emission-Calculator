@@ -56,3 +56,31 @@ export const CII_COEFFICIENTS: Record<string, { a: number; c: number; d1: number
   [ShipType.RO_RO_PASSENGER_SHIP]: { a: 902, c: 0.381, d1: 0.76, d2: 0.86, d3: 1.14, d4: 1.24 },
   [ShipType.CRUISE_PASSENGER_SHIP]: { a: 930, c: 0.383, d1: 0.87, d2: 0.95, d3: 1.05, d4: 1.13 }
 };
+
+// --- IMO GFI CONSTANTS ---
+export const GFI_2008_BASELINE = 93.3; // gCO2eq/MJ
+
+export const GFI_BASE_TARGET_REDUCTIONS: Record<number, number> = {
+  2028: 0.04,
+  2029: 0.06,
+  2030: 0.08,
+  2031: 0.124,
+  2032: 0.168,
+  2033: 0.212,
+  2034: 0.256,
+  2035: 0.30
+};
+
+export const GFI_DIRECT_COMPLIANCE_REDUCTIONS: Record<number, number> = {
+  2028: 0.17,
+  2029: 0.19,
+  2030: 0.21,
+  2031: 0.254,
+  2032: 0.298,
+  2033: 0.342,
+  2034: 0.386,
+  2035: 0.43
+};
+
+export const GFI_REMEDIAL_PRICE_T1 = 100; // USD per ton CO2eq (exceeding DCT)
+export const GFI_REMEDIAL_PRICE_T2 = 380; // USD per ton CO2eq (exceeding BT)
