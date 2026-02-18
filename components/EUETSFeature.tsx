@@ -53,7 +53,7 @@ const GRADE_PERCENTAGES: Record<BiofuelGrade, number> = {
 
 const EUETSFeature: React.FC = () => {
   // --- STATE ---
-  const [vesselName, setVesselName] = useState('MV OCEAN ADVENTURE');
+  const [vesselName, setVesselName] = useState('AAA');
   const [shipType, setShipType] = useState<ShipType>(ShipType.CONTAINER_SHIP);
   const [year, setYear] = useState(2026);
   const [euaPrice, setEuaPrice] = useState(85); // € per MT CO2e
@@ -320,7 +320,7 @@ const EUETSFeature: React.FC = () => {
                   <span className="text-[12px] font-black uppercase tracking-[0.2em] text-slate-800 dark:text-white">Directive Scope Logic</span>
                 </div>
                 <p className="text-[14px] text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-                  Calculated as <span className={`font-black uppercase ${results.voyageColor}`}>{results.voyageTypeLabel}</span>. 
+                  Calculated as <span className={`font-black uppercase ${results.voyageTypeLabel}`}>{results.voyageTypeLabel}</span>. 
                   As per EU ETS Article 3ga, exactly 
                   <span className="text-slate-900 dark:text-white font-black px-2 text-lg underline decoration-blue-500 underline-offset-4">{formatNum(results.scopeFactor * 100, 0)}%</span> 
                   of the emissions generated will be subject to surrender requirements.

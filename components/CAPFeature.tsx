@@ -46,7 +46,7 @@ const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 
 const CAPFeature: React.FC = () => {
   // --- STATE ---
-  const [vesselName, setVesselName] = useState('Seaways Eagle');
+  const [vesselName, setVesselName] = useState('AAA');
   const [shipType, setShipType] = useState<ShipType>(ShipType.TANKER);
   const [year, setYear] = useState(2025);
   const [dwt, setDwt] = useState(74996);

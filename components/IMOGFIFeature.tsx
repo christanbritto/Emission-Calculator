@@ -44,7 +44,7 @@ const LCV = {
 const IMOGFIFeature: React.FC = () => {
   // --- STATE ---
   const [year, setYear] = useState(2028);
-  const [vesselName, setVesselName] = useState('MV GREEN HORIZON');
+  const [vesselName, setVesselName] = useState('AAA');
   const [shipType, setShipType] = useState<ShipType>(ShipType.BULK_CARRIER);
   
   const [inventory, setInventory] = useState({

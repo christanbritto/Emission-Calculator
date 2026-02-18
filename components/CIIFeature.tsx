@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo } from 'react';
 import { 
   Ship, 
@@ -38,7 +37,7 @@ const Z_FACTORS: Record<number, number> = {
 
 const CIIFeature: React.FC = () => {
   // --- STATE ---
-  const [vesselName, setVesselName] = useState('MV OCEAN VOYAGER');
+  const [vesselName, setVesselName] = useState('AAA');
   const [shipType, setShipType] = useState('Bulk Carrier');
   const [dwt, setDwt] = useState(62000);
   const [distance, setDistance] = useState(60045);

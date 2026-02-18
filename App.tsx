@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Anchor, 
@@ -11,7 +10,8 @@ import {
   Waves, 
   Copyright,
   BarChart3,
-  ClipboardList
+  ClipboardList,
+  AlertCircle
 } from 'lucide-react';
 import BiofuelFeature from './components/BiofuelFeature';
 import CIIFeature from './components/CIIFeature';
@@ -58,7 +58,7 @@ const App: React.FC = () => {
             <Anchor className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-sm font-bold tracking-tight text-white uppercase">emissioncalculator.in</h1>
+            <h1 className="text-sm font-black tracking-tight text-white uppercase">Emission Calculator</h1>
           </div>
         </div>
 
@@ -89,7 +89,7 @@ const App: React.FC = () => {
            </button>
            <div className="mt-4 px-4 flex items-center gap-2 opacity-30">
              <Copyright className="w-3.5 h-3.5" />
-             <span className="text-[10px] font-black uppercase tracking-widest">2026 Calculator.in</span>
+             <span className="text-[10px] font-black uppercase tracking-widest text-white">2026 Emission Calculator</span>
            </div>
         </div>
       </aside>
@@ -106,6 +106,14 @@ const App: React.FC = () => {
             </h2>
             <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
               Regulatory Compliance Engine v1.4
+            </p>
+          </div>
+
+          {/* BETA DISCLAIMER */}
+          <div className="hidden lg:flex items-center gap-3 bg-amber-50 dark:bg-amber-900/10 border border-amber-200 dark:border-amber-800/50 px-5 py-2.5 rounded-2xl shadow-sm max-w-xl">
+            <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-500 shrink-0" />
+            <p className="text-[10px] font-bold text-amber-700 dark:text-amber-400 uppercase tracking-tight leading-tight">
+              System in Beta. Calculations are for simulation purposes only and should not be used for official regulatory reporting.
             </p>
           </div>
         </header>

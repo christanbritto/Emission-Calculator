@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Activity, 
@@ -27,6 +26,17 @@ const DashboardFeature: React.FC = () => {
     fuelEuTarget: 89.34,
     biofuelSavings: 420, // MT CO2 saved
     nextDeadline: '31 March 2026'
+  };
+
+  const getRatingColor = (rating: string) => {
+    switch (rating) {
+      case 'A': return 'bg-emerald-500 shadow-emerald-500/30 text-white';
+      case 'B': return 'bg-lime-500 shadow-lime-500/30 text-white';
+      case 'C': return 'bg-yellow-400 shadow-yellow-400/40 text-slate-900 ring-2 ring-yellow-400/20';
+      case 'D': return 'bg-orange-500 shadow-orange-500/30 text-white';
+      case 'E': return 'bg-rose-600 shadow-rose-600/30 text-white';
+      default: return 'bg-slate-500 shadow-slate-500/30 text-white';
+    }
   };
 
   return (
@@ -73,8 +83,8 @@ const DashboardFeature: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 rounded-[2.5rem] shadow-xl relative overflow-hidden group text-center">
           <span className="text-[11px] font-black uppercase tracking-[0.2em] mb-4 block text-slate-500">Current Rating</span>
           <div className="flex justify-center">
-             <div className="w-24 h-24 rounded-3xl bg-emerald-500 flex items-center justify-center shadow-[0_0_25px_rgba(16,185,129,0.3)]">
-               <span className="text-6xl font-black text-white">{fleetStats.ciiRating}</span>
+             <div className={`w-24 h-24 rounded-3xl flex items-center justify-center shadow-lg transition-all duration-500 ${getRatingColor(fleetStats.ciiRating)}`}>
+               <span className="text-6xl font-black">{fleetStats.ciiRating}</span>
              </div>
           </div>
           <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold mt-4 uppercase tracking-wider">
@@ -104,9 +114,9 @@ const DashboardFeature: React.FC = () => {
                       <span className="text-xs font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">Attained vs Required</span>
                       <span className="text-2xl font-black text-slate-800 dark:text-white">{fleetStats.ciiActual} / {fleetStats.ciiRequired}</span>
                    </div>
-                   <div className="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex shadow-inner">
+                   <div className="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex shadow-inner border border-slate-200 dark:border-slate-700">
                       <div className="h-full bg-emerald-500" style={{ width: '30%' }} />
-                      <div className="h-full bg-emerald-400" style={{ width: '20%' }} />
+                      <div className="h-full bg-lime-500" style={{ width: '20%' }} />
                       <div className="h-full bg-yellow-400 border-x border-slate-100 dark:border-slate-900" style={{ width: '15%' }} />
                       <div className="h-full bg-orange-500" style={{ width: '20%' }} />
                       <div className="h-full bg-rose-500" style={{ width: '15%' }} />

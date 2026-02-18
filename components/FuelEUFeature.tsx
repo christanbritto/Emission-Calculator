@@ -51,7 +51,7 @@ const VLSFO_ENERGY_DENSITY = 41000; // MJ/t
 const FuelEUFeature: React.FC = () => {
   // --- STATE ---
   const [year, setYear] = useState(2025);
-  const [vesselName, setVesselName] = useState('MV OCEAN ADVENTURE');
+  const [vesselName, setVesselName] = useState('AAA');
   const [consecutiveYears, setConsecutiveYears] = useState(1);
   const [isIceClass, setIsIceClass] = useState(false);
   
@@ -206,7 +206,7 @@ const FuelEUFeature: React.FC = () => {
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-4">
                 <div className="bg-orange-600/10 p-3 rounded-2xl text-orange-600 dark:text-orange-500"><Flame className="w-6 h-6" /></div>
-                <h3 className="font-black text-sm uppercase tracking-[0.3em] text-slate-800 dark:text-white">Fuel Inventory (MT)</h3>
+                <h3 className="font-black text-sm uppercase tracking-[0.3em] text-slate-800 dark:text-white uppercase tracking-widest">Fuel Inventory (MT)</h3>
               </div>
             </div>
 
